@@ -151,7 +151,9 @@
 
 
 
-type Vegetable = { name: string, color: string };
+type Vegetable = { name: string, color?: string };
 
-const vegetable: Vegetable[] = [{ name: "tomato", color: "red" },
+const vegetable: Vegetable[] = [{ name: "tomato" },
                               { name: "potato", color: "yellow" }];
+
+const toys:String[] =["plastic","iron"] 
