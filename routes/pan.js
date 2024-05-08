@@ -1,5 +1,5 @@
 const express=require("express");
-const { panverify, pandetails } = require("../controllers/pan");
+const { panverify, pandetails,panDOB } = require("../controllers/pan");
 
 const router=express.Router();
 
