@@ -7,7 +7,7 @@ const fields =[{pan:"95601"},{aadhaar:"95602"},{gst:"95603"},{voterId:"95604"}];
 
 const gitemIdToken = (fldID) => {
     try {
-        const itoken = jwt.sign({ fldID }, process.env.JWT_SECRET,{noTimestamp: true });
+        const itoken = jwt.sign({ fldID }, process.env.JWT_SECRET,{ expiresIn: '1h' });
         console.log('Generated token:', itoken);
         return itoken;
     } catch (error) {

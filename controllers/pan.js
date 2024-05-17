@@ -16,7 +16,25 @@ exports.panverify = async (req, res) => {
     if (itemIdVerify.fldID === '95601') {
       const { pan, fuzzy, panStatus } = essentials;
       console.log("true fldID");
-      const isValidPAN = (pan) => /^[A-Z]{5}[0-9]{4}[A-Z]$/.test(pan);
+      const isValidPAN = (pan) => {
+        // /^[A-Z]{5}[0-9]{4}[A-Z]$/.test(pan);
+
+        const panRegex = /^[A-Z]{5}[0-9]{4}[A-Z]$/;
+        if (!panRegex.test(pan)) {
+          return false;
+        }
+        for (let i = 0; i < 3; i++) {
+          const currentChar = pan.charCodeAt(i);
+          const nextChar = pan.charCodeAt(i + 1);
+          const nextNextChar = pan.charCodeAt(i + 2);
+      
+          if (nextChar === currentChar + 1 && nextNextChar === nextChar + 1) {
+            return false;
+          }
+        }
+        return true;    
+    
+    }
       
       if (!isValidPAN(pan) || !fuzzy || !panStatus) {
         console.log(pan);
@@ -24,7 +42,8 @@ exports.panverify = async (req, res) => {
       } else {
         console.log(pan);
 
-        const response = await axios.post('https://sandbox.surepass.io/api/v1/pan/pan', {
+        // const response = await axios.post('https://sandbox.surepass.io/api/v1/pan/pan', {
+        const response = await axios.post('https://pandbox.surepass.io/api/v1/pan/pan', {
           id_number: pan 
         }, {
           headers: {
@@ -44,29 +63,6 @@ exports.panverify = async (req, res) => {
     res.status(500).json({ success: false, message: error.message });
   }
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -125,37 +121,6 @@ exports.panverify = async (req, res) => {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // exports.panverify = async (req, res) => {
 //   try {
 //     const { service, itemId, task, essentials } = req.body;
@@ -200,14 +165,6 @@ exports.panverify = async (req, res) => {
 //     res.status(500).json({ success: false, message: error.message });
 //   }
 // };
-
-
-
-
-
-
-
-
 
 
 
