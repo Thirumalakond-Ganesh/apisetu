@@ -43,13 +43,13 @@ exports.panverify = async (req, res) => {
         console.log(pan);
 
         // const response = await axios.post('https://sandbox.surepass.io/api/v1/pan/pan', {
-        const response = await axios.post('https://pandbox.surepass.io/api/v1/pan/pan', {
+        const response = await axios.post('https://pandbox.purepass.io/api/v1/pan/pan', {
           id_number: pan 
         }, {
           headers: {
             'Content-Type': 'application/json',
             'Accept': 'application/json',
-            'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcxMzk1MzQ4NiwianRpIjoiNjAwYzk1YzUtMjhkMi00OTBkLWIxOTMtNThkNGM4MzlkOGI5IiwidHlwZSI6ImFjY2VzcyIsImlkZW50aXR5IjoiZGV2Lm5taXRAc3VyZXBhc3MuaW8iLCJuYmYiOjE3MTM5NTM0ODYsImV4cCI6MTcxNTI0OTQ4NiwiZW1haWwiOiJubWl0QHN1cmVwYXNzLmlvIiwidGVuYW50X2lkIjoibWFpbiIsInVzZXJfY2xhaW1zIjp7InNjb3BlcyI6WyJ1c2VyIl19fQ.bknLKmz5DrUGJ3ytg4GQl_X0wa9CZwRxxV36ZRYwaIQ'
+            'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcxNDgxMTAzNywianRpIjoiMzg4N2Y3MmYtZjJmYy00M2Q1LTg5MzctOTdjODI2ZTE3YTRiIiwidHlwZSI6ImFjY2VzcyIsImlkZW50aXR5IjoiZGV2Lm5taXRAc3VyZXBhc3MuaW8iLCJuYmYiOjE3MTQ4MTEwMzcsImV4cCI6MTcxNjEwNzAzNywiZW1haWwiOiJubWl0QHN1cmVwYXNzLmlvIiwidGVuYW50X2lkIjoibWFpbiIsInVzZXJfY2xhaW1zIjp7InNjb3BlcyI6WyJ1c2VyIl19fQ.FI3KIMlAfU15q1SieFPDpX1-d0cnc5KJfMGPAckfVwA'
           }
         });
         
