@@ -1,0 +1,19 @@
+/node_modules
+/config
+.env
+config.env
+/config.env
+
+
+
+# Ignore node_modules directory
+node_modules/
+    
+# Ignore log files
+*.log
+
+# Ignore all .env files
+.env
+
+# Ignore specific files
+secret-config.json

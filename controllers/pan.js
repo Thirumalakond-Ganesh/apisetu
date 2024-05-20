@@ -2,6 +2,7 @@ const { itemId } = require("./itemId");
 const jwt = require("jsonwebtoken");
 const axios=require("axios");
 const fields =[{pan:"95601"},{aadhaar:"95602"},{gst:"95603"},{voterId:"95604"}];
+const data = require('../DataPan.json');
 
 
 exports.panverify = async (req, res) => {
@@ -40,21 +41,41 @@ exports.panverify = async (req, res) => {
         console.log(pan);
         return res.status(400).json({ error: "Missing personal verification fields in the request body" });
       } else {
-        console.log(pan);
-
         // const response = await axios.post('https://sandbox.surepass.io/api/v1/pan/pan', {
-        const response = await axios.post('https://pandbox.surepass.io/api/v1/pan/pan', {
-          id_number: pan 
-        }, {
-          headers: {
-            'Content-Type': 'application/json',
-            'Accept': 'application/json',
-            'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcxMzk1MzQ4NiwianRpIjoiNjAwYzk1YzUtMjhkMi00OTBkLWIxOTMtNThkNGM4MzlkOGI5IiwidHlwZSI6ImFjY2VzcyIsImlkZW50aXR5IjoiZGV2Lm5taXRAc3VyZXBhc3MuaW8iLCJuYmYiOjE3MTM5NTM0ODYsImV4cCI6MTcxNTI0OTQ4NiwiZW1haWwiOiJubWl0QHN1cmVwYXNzLmlvIiwidGVuYW50X2lkIjoibWFpbiIsInVzZXJfY2xhaW1zIjp7InNjb3BlcyI6WyJ1c2VyIl19fQ.bknLKmz5DrUGJ3ytg4GQl_X0wa9CZwRxxV36ZRYwaIQ'
-          }
+        // const response = await axios.post('https://pandbox.purepass.io/api/v1/pan/pan', {
+        //   id_number: pan 
+        // }, {
+        //   headers: {
+        //     'Content-Type': 'application/json',
+        //     'Accept': 'application/json',
+        //     'Authorization': `Bearer ${process.env.SUREPASS_TOKEN}`
+        //  
+        // });
+        // console.log(response.data);
+        // return res.status(201).json({ data: response.data });
+
+
+        const panD = data.panData;
+        const panFinder = panD.find(p => p.data.pan_number === pan);
+        if(panFinder){
+          console.log(panFinder);
+          return res.status(201).json(panFinder);
+        }
+        else{
+          return res.status(422).json({
+            data: {
+                client_id: "pan_ochoZzshxfGtvHqNQcik",
+                pan_number: pan,
+                full_name: null,
+                category: "person"
+            },
+            status_code: 422,
+            success: false,
+            message: "Invalid PAN",
+            message_code: null
         });
-        
-        console.log(response.data);
-        return res.status(201).json({ data: response.data });
+        }
+     
       }
     } else {
       return res.status(500).json({ error: "Not Valid details" });
