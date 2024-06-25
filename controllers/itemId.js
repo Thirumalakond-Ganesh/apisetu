@@ -2,8 +2,15 @@ const jwt=require('jsonwebtoken');
 
 const JWT_SECRET = 'secret';
 const JWT_SECRET_ITEM = 'secretItemId';
-const users = [{username: 'admin',password: 'password'}];
-const fields =[{pan:"95601"},{aadhaar:"95602"},{gst:"95603"},{voterId:"95604"}];
+const users = [{ username: 'admin', password: 'password' },{username: 'admin123', password: 'password123'}];
+// const fields =[{pan:"95601"},{aadhaar:"95602"},{gst:"95603"},{voterId:"95604"}];
+const fields = [
+    { id: '95601', type: 'pan' },
+    { id: '95602', type: 'aadhaar' },
+    { id: '95603', type: 'gst' },
+    { id: '95604', type: 'voterId' }
+  ];
+
 
 const gitemIdToken = (fldID) => {
     try {
@@ -27,25 +34,22 @@ try {
 
     const decoded = jwt.verify(token, process.env.JWT_SECRET);
 
-    const { usernamee } = decoded;
-    if(username !== req.body.username) {
+    console.log(decoded);
+    if(decoded.username != username) {
         return res.status(401).json({ success: false, message: 'Invalid token for the user' });
     }
 else{
     console.log(decoded);
 
-const field = fields.find(f => f.pan === fieldID);
-// console.log(field)
+const field = fields.find(f => f.id === fieldID);
 if (!field) {
-    return res.status(404).json({ success: false, message: "Field not found" });
+  return res.status(404).json({ success: false, message: "Field not found" });
 }
 const itoken = gitemIdToken(fieldID);
 res.json({ success: true, message: 'Token is valid', decoded ,itoken});
 
 }
 }
-
-
 catch (error) {
     res.status(500).json({ success: false, message: error.message });
 }

@@ -1,4 +1,4 @@
-const { itemId } = require("./itemId");
+// const { itemId } = require("./itemId");
 const jwt = require("jsonwebtoken");
 const axios=require("axios");
 const fields =[{pan:"95601"},{aadhaar:"95602"},{gst:"95603"},{voterId:"95604"}];
