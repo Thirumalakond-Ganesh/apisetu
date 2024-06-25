@@ -18,6 +18,7 @@ app.use(express.urlencoded({extended:true}));
 
 app.use('/api/v1',require("./routes/token"))
 app.use('/api/v1',require("./routes/pan"))
+app.use('/api/v1',require("./routes/aadhar"))
 
 
 

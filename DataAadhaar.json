@@ -1,0 +1,42 @@
+{
+  "AadhaarData": [
+    {
+      "data": {
+        "client_id": "aadhaar_validation_ZPdvCPJYnXwykudxxtar",
+        "age_range": "20-30",
+        "aadhaar_number": "746681165270",
+        "full_name": "THIRUMALAKONDA GANESH",
+        "state": "Andhra Pradesh",
+        "gender": "M",
+        "last_digits": "534",
+        "is_mobile": true,
+        "remarks": "success",
+        "less_info": false
+      },
+      "status_code": 200,
+      "success": true,
+      "message": null,
+      "message_code": "success"
+    },
+    
+    
+    {
+      "data": {
+        "client_id": "aadhaar_validation_ZPdvCPJYnXrtkudxhtrsd",
+        "age_range": "20-30",
+        "full_name": "AMIT CHAUHAN",
+        "aadhaar_number": "956073731112",
+        "state": "Uttar Pradesh",
+        "gender": "M",
+        "last_digits": "311",
+        "is_mobile": true,
+        "remarks": "success",
+        "less_info": false
+      },
+      "status_code": 200,
+      "success": true,
+      "message": null,
+      "message_code": "success"
+    }
+  ]
+}
