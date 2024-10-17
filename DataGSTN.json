@@ -1,0 +1,175 @@
+{
+  "GSTData": [
+    {
+      "data": {
+        "reference_id": "19",
+        "GSTIN": "29AAACP2916R1ZR",
+        "legal_name_of_business": "CASHFREE",
+        "center_jurisdiction": "RANGE-CSD5",
+        "state_jurisdiction": "LGSTO 015 - Bengaluru",
+        "date_of_registration": "2017-07-01",
+        "constitution_of_business": "Private Limited Company",
+        "taxpayer_type": "Regular",
+        "gst_in_status": "Active",
+        "last_update_date": "2022-03-16",
+        "nature_of_business_activities": "[Service Provision, Office / Sale Office]",
+        "principal_place_address": "1st floor, Essae Vaishnavi Summit, No. 6/B, Bengaluru, 80feet Road, 3rd Block, Koramangala, Karnataka, 560034",
+        "valid": true,
+        "message": "GSTIN Exists"
+      },
+      "status_code": 200,
+      "success": true,
+      "message": null,
+      "message_code": "success"
+    },
+    {
+      "data": {
+        "reference_id": "19",
+        "GSTIN": "29AAGCN9377G1ZT",
+        "legal_name_of_business": "NMIT SOLUTIONS (OPC) PRIVATE LIMITED",
+        "center_jurisdiction": "RANGE-CSD5",
+        "state_jurisdiction": "LGSTO 015 - Bengaluru",
+        "date_of_registration": "20/05/2020",
+        "constitution_of_business": "Private Limited Company",
+        "taxpayer_type": "Regular",
+        "gst_in_status": "Active",
+        "last_update_date": "2022-03-16",
+        "nature_of_business_activities": "[IT Solutions]",
+        "principal_place_address": "NO 49, BAZAAR STREET, 2ND CROSS, UDAYANAGAR TIN FACTORY, BANGALORE, Bengaluru Urban, Karnataka, 560016",
+        "valid": true,
+        "message": "GSTIN Exists"
+      },
+      "status_code": 200,
+      "success": true,
+      "message": null,
+      "message_code": "success"
+    },
+    {
+      "data": {
+        "stateJurisdictionCode": "UP333",
+        "stateJurisdiction": "Corporate Circle, Noida",
+        "taxpayerType": "Regular",
+        "legalNameOfBusiness": "ONE97 COMMUNICATIONS LIMITED",
+        "additionalPlaceOfBusinessFields": [
+          {
+            "additionalPlaceOfBusinessAddress": {
+              "buildingName": "CGO Complex",
+              "location": "Noida",
+              "streetName": "Sector -3",
+              "buildingNumber": "D-7",
+              "stateName": "Uttar Pradesh",
+              "districtName": "Gautam Buddha Nagar",
+              "city": "Delhi",
+              "floorNumber": "Ground Floor",
+              "lattitude": "26.85",
+              "pincode": "201301",
+              "longitude": "80.949997",
+              "locality": ""
+            },
+            "natureOfAdditionalPlaceOfBusiness": "Office / Sale Office"
+          }
+        ],
+        "dateOfCancellation": "",
+        "natureOfBusinessActivity": [
+          [
+            "Office / Sale Office",
+            "Supplier of Services",
+            "Warehouse / Depot"
+          ]
+        ],
+        "GSTIN": "09AAACO4007A1Z3",
+        "lastUpdatedDate": "06/07/2021",
+        "dateOfRegistration": "01/07/2017",
+        "constitutionOfBusiness": "Public Limited Company",
+        "principalPlaceOfBusinessFields": {
+          "principalPlaceOfBusinessAddress": {
+            "buildingName": "Gaur Green",
+            "location": "NOIDA",
+            "streetName": "SECTOR-5",
+            "buildingNumber": "B-121",
+            "stateName": "Uttar Pradesh",
+            "districtName": "Gautam Buddha Nagar",
+            "city": "GZB",
+            "floorNumber": "G-7",
+            "lattitude": "26.85",
+            "pincode": "201301",
+            "longitude": "80.949997",
+            "locality": ""
+          },
+          "natureOfPrincipalPlaceOfBusiness": "Office / Sale Office"
+        },
+        "gstnStatus": "Active",
+        "centerJurisdictionCode": "YC0401",
+        "tradeName": "M/S ONE 97 COMMUNICATION LTD",
+        "centerJurisdiction": "RANGE - 16"
+      }
+    },
+    {
+      "data":{
+        "GSTIN": "05ABNTY3290P8ZB",
+        "code": 200,
+        "timestamp": 1711561196000,
+        "transaction_id": "b974609e-66da-4f4f-9cd0-63fdde44644c",
+        "data": {
+          "data": {
+            "stjCd": "AP003",
+            "lgnm": "MS CORPORATION",
+            "stj": "BCP KODIKONDA",
+            "dty": "Regular",
+            "cxdt": "",
+            "einvoiceStatus": "Yes",
+            "nba": [
+              "Bonded Warehouse",
+              "EOU / STP / EHTP",
+              "Factory / Manufacturing",
+              "Input Service Distributor (ISD)",
+              "Leasing Business"
+            ],
+            "lstupdt": "05/01/2017",
+            "rgdt": "05/05/2017",
+            "ctb": "Foreign LLP",
+            "sts": "Provisional",
+            "ctjCd": "AP004",
+            "ctj": "BCP THUMMAKUNTA",
+            "tradeNam": "ALTON PLASTIC PRIVATE LTD",
+            "adadr": [
+              {
+                "addr": {
+                  "bnm": "ELPHINSTONE BUILDING",
+                  "st": "10, VEER NARIMAN ROAD",
+                  "loc": "FORT",
+                  "bno": "10",
+                  "stcd": "Uttarakhand",
+                  "flno": "1ST FLOOR",
+                  "lt": "74.2179",
+                  "lg": "27.0238",
+                  "pncd": "249185"
+                },
+                "ntr": [
+                  "Wholesale Business"
+                ]
+              }
+            ],
+            "pradr": {
+              "addr": {
+                "bnm": "ELPHINSTONE BUILDING",
+                "st": "10, VEER NARIMAN ROAD",
+                "loc": "FORT",
+                "bno": "10",
+                "stcd": "Uttarakhand",
+                "flno": "1ST FLOOR",
+                "lt": "74.2179",
+                "lg": "27.0238",
+                "pncd": "249185"
+              },
+              "ntr": [
+                "Wholesale Business"
+              ]
+            }
+          },
+          "status_cd": "1"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+    "merchantId": "org_qMOPL369km74RKOz",
+    "processReturn": {
+      "INProfileResponse": {
+        "CAIS_Account": {
+          "CAIS_Summary": {
+            "Credit_Account": {
+              "CADSuitFiledCurrentBalance": 0,
+              "CreditAccountActive": 2,
+              "CreditAccountClosed": 0,
+              "CreditAccountDefault": 0,
+              "CreditAccountTotal": 2
+            },
+            "Total_Outstanding_Balance": {
+              "Outstanding_Balance_All": 92272,
+              "Outstanding_Balance_Secured": 90463,
+              "Outstanding_Balance_Secured_Percentage": 98,
+              "Outstanding_Balance_UnSecured": 1809,
+              "Outstanding_Balance_UnSecured_Percentage": 2
+            }
+          }
+        },
+        "CAPS": {
+          "CAPS_Summary": {
+            "CAPSLast180Days": 0,
+            "CAPSLast30Days": 0,
+            "CAPSLast7Days": 0,
+            "CAPSLast90Days": 0
+          }
+        },
+        "CreditProfileHeader": {
+          "CustomerReferenceID": "",
+          "Enquiry_Username": "********",
+          "ReportDate": 20241231,
+          "ReportNumber": 1000000000619,
+          "ReportTime": 152259,
+          "Subscriber": "",
+          "Subscriber_Name": "********",
+          "Version": "V2.4"
+        },
+        "Current_Application": {
+          "Current_Application_Details": {
+            "Amount_Financed": 0,
+            "Current_Applicant_Additional_AddressDetails": "",
+            "Current_Applicant_Address_Details": {
+              "BldgNoSocietyName": "",
+              "City": "Bangalore",
+              "Country_Code": "IB",
+              "FlatNoPlotNoHouseNo": "221 B BAKER STREET",
+              "Landmark": "OPPOSITE WOLLATON HALL",
+              "PINCode": 560005,
+              "RoadNoNameAreaLocality": "",
+              "State": 29
+            },
+            "Current_Applicant_Details": {
+              "Date_Of_Birth_Applicant": 19901231,
+              "First_Name": "JANE",
+              "Last_Name": "DOE",
+              "MobilePhoneNumber": 919876543210,
+              "IncomeTaxPan": "ABCDZ0000P",
+              "Match_result": {
+                "Exact_match": "Y"
+              },
+              "SCORE": {
+                "BureauScore": 642
+              },
+              "UserMessage": {
+                "UserMessageText": "Normal Response"
+              },
+              "requestId": "TOSDDEWThcwEAjg=",
+              "statusCode": 200
+            }
+          }
+        }
+      }
+    }
+  }
+  

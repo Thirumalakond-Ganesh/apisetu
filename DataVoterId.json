@@ -1,0 +1,36 @@
+{
+  "VoterIdData": [
+    {
+      "data": {
+        "client_id": "voter_id_validation_AHGgvKvhsdGCghv",
+        "voter_id": "XRX1687896",
+        "full_name": "T S ARCHANA",
+        "date_of_birth": "20-05-1999",
+        "gender": "Female",
+        "Address": "4-23, Anupalli, Greamspet, Greamspet, Chittoor, 517002",
+        "state": "Andhra Pradesh",
+        "remarks": "success"
+      },
+      "status_code": 200,
+      "success": true,
+      "message": null,
+      "message_code": "success"
+    },
+    {
+      "data": {
+        "client_id": "voter_id_validation_hHBAbjhbhjhbjsabJHBSH",
+        "voter_id": "IJC1695683",
+        "full_name": " Ganesh Thirumalakonda",
+        "date_of_birth": "07-07-2000",
+        "gender": "Male",
+        "Address": "10/67/A, Kadapavandla Palli, Cheemalacheruvu Palli, Annamayya, 516257",
+        "state": "Andhra Pradesh",
+        "remarks": "success"
+      },
+      "status_code": 200,
+      "success": true,
+      "message": null,
+      "message_code": "success"
+    }
+  ]
+}

@@ -37,6 +37,24 @@
       "success": true,
       "message": null,
       "message_code": "success"
+    },
+    {
+      "data": {
+        "client_id": "aadhaar_validation_ZPdvCPJYnXrtkudxhtrsd",
+        "age_range": "20-30",
+        "full_name": "Vennapusa Siva Rajitha",
+        "aadhaar_number": "578399786275",
+        "state": "Andhra Pradesh",
+        "gender": "F",
+        "last_digits": "067",
+        "is_mobile": true,
+        "remarks": "success",
+        "less_info": false
+      },
+      "status_code": 200,
+      "success": true,
+      "message": null,
+      "message_code": "success"
     }
   ]
 }

@@ -7,8 +7,9 @@ const users = [{ username: 'admin', password: 'password' },{username: 'admin123'
 const fields = [
     { id: '95601', type: 'pan' },
     { id: '95602', type: 'aadhaar' },
-    { id: '95603', type: 'gst' },
-    { id: '95604', type: 'voterId' }
+    { id: '95603', type: 'gstn' },
+    { id: '95604', type: 'voterId' },
+    { id: '95605', type: 'cibil' },
   ];
 
 
