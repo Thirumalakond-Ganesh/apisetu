@@ -1,6 +1,6 @@
 const jwt = require("jsonwebtoken");
 const data = require("../DataGSTN.json");
-const GSTVerificationLog = require("../models/gstinVerifiaction"); 
+const GSTVerificationLog = require("../models/gstinVerifiaction");
 
 exports.gstnverify = async (req, res) => {
   try {
@@ -15,14 +15,14 @@ exports.gstnverify = async (req, res) => {
     const itemIdVerify = jwt.verify(itemId, process.env.JWT_SECRET);
     if (itemIdVerify.fldID === "95603") {
       const { gstin, gstStatus } = essentials;
-      console.log("GSTIN from request:", gstin); 
-      console.log("GST Status from request:", gstStatus); 
+      console.log("GSTIN from request:", gstin);
+      console.log("GST Status from request:", gstStatus);
 
       const isValidGSTIN = (gstin) => {
         const gstinRegex =
           /^[0-9]{2}[A-Z]{5}[0-9]{4}[A-Z]{1}[A-Z\d]{1}[Z]{1}[A-Z\d]{1}$/i;
         const isValid = gstinRegex.test(gstin);
-        console.log("GSTIN Regex check:", isValid); 
+        console.log("GSTIN Regex check:", isValid);
         return isValid;
       };
 
@@ -94,5 +94,44 @@ exports.gstnverify = async (req, res) => {
     }
   } catch (error) {
     res.status(500).json({ success: false, message: error.message });
+  }
+};
+
+exports.GSTData = async (req, res) => {
+  const { year, month, kycType } = req.query;
+
+  try {
+    const matchCriteria = {};
+
+    if (year || month) {
+      matchCriteria.date = {};
+      if (year) {
+        matchCriteria.date.$gte = new Date(`${year}-01-01`);
+        matchCriteria.date.$lt = new Date(`${parseInt(year) + 1}-01-01`);
+      }
+      if (month) {
+        // If year isn't specified, use current year
+        const queryYear = year || new Date().getFullYear();
+        matchCriteria.date.$gte = new Date(`${queryYear}-${month}-01`);
+        matchCriteria.date.$lt = new Date(
+          `${queryYear}-${parseInt(month) + 1}-01`
+        );
+      }
+    }
+    //Accessing the data from the database based on the provided query parameters
+
+    const gstinCount =
+      kycType === "GSTIN" || !kycType
+        ? await GSTVerificationLog.countDocuments(matchCriteria)
+        : 0;
+
+    const data = {
+      gstin: gstinCount,
+    };
+
+    res.json(data);
+  } catch (error) {
+    console.error("Error fetching KYC data:", error);
+    res.status(500).json({ error: "An error occurred while fetching data" });
   }
 };
